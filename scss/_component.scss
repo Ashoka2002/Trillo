@@ -13,6 +13,12 @@
   align-items: center;
   flex: 0 0 40%;
 
+  @media only screen and (max-width: $bp-small) {
+    order: 1;
+    flex: 0 0 70%;
+    margin-left: auto;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -128,14 +134,11 @@
   @media only screen and (max-width: $bp-medium) {
     margin: 0;
     display: flex;
+    overflow: scroll;
   }
 
   &__item {
     position: relative;
-
-    @media only screen and (max-width: $bp-medium) {
-      flex-grow: 1;
-    }
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
@@ -145,7 +148,12 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
+      flex-grow: 1;
       margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex: 0 0 150px;
     }
   }
 
@@ -187,6 +195,9 @@
       @media only screen and (max-width: $bp-medium) {
         justify-content: center;
         padding: 1.5rem 0;
+      }
+      @media only screen and (max-width: $bp-small) {
+        padding: 1rem;
       }
     }
   }
@@ -239,6 +250,11 @@
     letter-spacing: 1px;
     padding: 1.5rem 2rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+      padding: 1rem 1.5rem;
+    }
   }
 
   &__stars {
@@ -278,6 +294,10 @@
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -3px;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.5rem;
+      }
     }
     &-count {
       font-size: 1rem;
@@ -476,6 +496,10 @@
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.5rem;
+    }
   }
 }
 
